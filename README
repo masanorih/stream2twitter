@@ -3,6 +3,9 @@ post twitter from sendmail aliases pipe command.
 set line like below to your aliases.
 yourstream2twittermailaccount: |/some/where/stream2twitter.pl
 
+Or, you can just do like
+% ./stream2twitter.pl < mailbody
+
 post to twitpic if a mail has a attachment.
 
 Be aware! this script uses Config::Pit,
