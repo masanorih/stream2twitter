@@ -1,0 +1,27 @@
+post twitter from sendmail aliases pipe command.
+
+set line like below to your aliases.
+yourstream2twittermailaccount: |/some/where/stream2twitter.pl
+
+post to twitpic if a mail has a attachment.
+
+Be aware! this script uses Config::Pit,
+and .pit files should be at sendmail user's home directory.
+# It is /var/spool/mqueue on FreeBSD
+
+If you do not like Config::Pit, you should write $config directly.
+Those variables are required.
+
+    # for twitter
+    # consumer key/secret from http://dev.twitter.com/apps/XXXXXX
+    consumer_key
+    consumer_secret
+    # access token/secret from http://dev.twitter.com/apps/XXXXXX/my_token
+    access_token
+    access_token_secret
+    # for twitpic
+    username
+    password
+
+sendmail の aliases の pipe 起動から twitter に投稿するスクリプト
+添付があれば twitpic に投稿
